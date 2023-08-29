@@ -1,37 +1,34 @@
 # MDP REPRESENTATION
-
 ## AIM:
-Write your aim here
+To represent any one real-world problem in MDP form.
 
 ## PROBLEM STATEMENT:
-
 ### Problem Description
-Write your answer here
+The snake should eat the apple which is the goal point. The snake should not get hit on the wall while moving.
 
 ### State Space
-Write your answer here
+{0,1,2,3,4,5,6,7,8} 
 
 ### Sample State
-Write your answer here
+5
 
 ### Action Space
-Write your answer here
+{Front[0], Back[1], Right[2], left[3]}
 
 ### Sample Action
-Write your answer here
+Front[0]
 
 ### Reward Function
-Write your answer here
+R = { +1 , if the snake eats the apple
+       0 , otherwise
 
 ### Graphical Representation
-Write your answer here
+
 
 ## PYTHON REPRESENTATION:
-Write your code here
+
 
 ## OUTPUT:
-Write your Python output here
 
 ## RESULT:
-Write your output here
 
