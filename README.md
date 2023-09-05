@@ -1,22 +1,22 @@
 # MDP REPRESENTATION
 ## AIM:
-To represent any one real-world problem in MDP form.
+To represent any one real world problem in Markov Decision Problem(MDP).
 
 ## PROBLEM STATEMENT:
 ### Problem Description
-The snake should eat the apple which is the goal point. The snake should not get hit on the wall while moving.
+Move the snake 🐍 to reach the apple 🍏, which is the goal in a 3*3 grid.
 
 ### State Space
 {0,1,2,3,4,5,6,7,8} 
 
 ### Sample State
-5
+2
 
 ### Action Space
-{Front[0], Back[1], Right[2], left[3]}
+{Up[0],Down[1],Left[2],Right[3]}
 
 ### Sample Action
-Front[0]
+Down[1]
 
 ### Reward Function
 R = { +1 , if the snake eats the apple
@@ -26,9 +26,71 @@ R = { +1 , if the snake eats the apple
 
 
 ## PYTHON REPRESENTATION:
-
+```python
+# Creating Dictionary
+P={
+    0:{
+        0:[(1.0,0,0.0,False)],
+        1:[(1.0,3,0.0,False)],
+        2:[(1.0,0,0.0,False)],
+        3:[(1.0,1,0.0,False)]
+    },
+    1:{
+        0:[(1.0,1,0.0,False)],
+        1:[(1.0,4,0.0,False)],
+        2:[(1.0,0,0.0,False)],
+        3:[(1.0,2,0.0,False)]
+    },
+    2:{
+        0:[(1.0,2,0.0,False)],
+        1:[(1.0,5,0.0,False)],
+        2:[(1.0,1,0.0,False)],
+        3:[(1.0,2,0.0,False)]
+    },
+    3:{
+        0:[(1.0,0,0.0,False)],
+        1:[(1.0,6,0.0,False)],
+        2:[(1.0,3,0.0,False)],
+        3:[(1.0,4,0.0,False)]
+    },
+    4:{
+        0:[(1.0,1,0.0,False)],
+        1:[(1.0,7,0.0,False)],
+        2:[(1.0,3,0.0,False)],
+        3:[(1.0,5,0.0,False)]
+    },
+    5:{
+        0:[(1.0,2,0.0,False)],
+        1:[(1.0,8,1.0,True)],
+        2:[(1.0,4,0.0,False)],
+        3:[(1.0,5,0.0,False)]
+    },
+    6:{
+        0:[(1.0,3,0.0,False)],
+        1:[(1.0,6,0.0,False)],
+        2:[(1.0,6,0.0,False)],
+        3:[(1.0,7,0.0,False)]
+    },
+    7:{
+        0:[(1.0,4,0.0,False)],
+        1:[(1.0,7,0.0,False)],
+        2:[(1.0,6,0.0,False)],
+        3:[(1.0,8,1.0,True)]
+    },
+    8:{
+        0:[(1.0,5,0.0,False)],
+        1:[(1.0,8,1.0,True)],
+        2:[(1.0,7,0.0,False)],
+        3:[(1.0,8,1.0,True)]
+    }
+}
+```
 
 ## OUTPUT:
 
-## RESULT:
 
+## RESULT:
+Thus a real world problem is represented as Markov Decision Problem in the following ways successfully:
+
+1. Graphical Representation
+2. Python Representation
